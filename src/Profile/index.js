@@ -50,10 +50,10 @@ const Profile = () => (
   <Query query={ GET_REPOSITORIES_OF_CURRENT_USER }>
     { ( props) =>  {
       console.log(props)
-      const { loading, data } = props;
+      const { loading, data, error } = props;
 
       if(loading || !data) return <p> is loading...</p>
-        
+    if(error) return <div>{error.toString()}</div>
       const { viewer } = data;
         
       if(!viewer) {
