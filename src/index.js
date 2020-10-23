@@ -6,11 +6,12 @@ import { ApolloLink } from 'apollo-link';
 import { HttpLink } from 'apollo-link-http';
 import { onError } from 'apollo-link-error';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import 'dotenv/config';
 
 import * as serviceWorker from './serviceWorker';
 import App from './App';
-
 import './style.css';
+
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql';
 
